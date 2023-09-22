@@ -38,4 +38,16 @@ M.dap_go = {
   },
 }
 
+M.gopher = {
+  plugin = true,
+  n = {
+    ["<leader>gi"] = {
+      function()
+        vim.api.nvim_exec("GoIfErr", false)
+      end,
+      "Generate if error",
+    },
+  },
+}
+
 return M
