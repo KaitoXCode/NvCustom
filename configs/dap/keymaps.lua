@@ -30,8 +30,8 @@ function M.setup()
       t = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
       x = { "<cmd>lua require'dap'.terminate()<cr>", "Terminate" },
       u = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
-      gt = { "<cmd>lua require'dap-go'.debug_test()<cr>", "Debug go test" },
-      gl = { "<cmd>lua require'dap-go'.debug_last()<cr>", "Debug last go test" },
+      -- gt = { "<cmd>lua require'dap-go'.debug_test()<cr>", "Debug go test" },
+      -- gl = { "<cmd>lua require'dap-go'.debug_last()<cr>", "Debug last go test" },
     },
   }
 

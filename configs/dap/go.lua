@@ -38,6 +38,7 @@ function M.setup(_)
       build_flags = "",
     },
   }
+  require("core.utils").load_mappings "dap_go"
 end
 
 return M

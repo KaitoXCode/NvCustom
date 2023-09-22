@@ -144,7 +144,8 @@ local plugins = {
       require "custom.configs.illuminate"
     end,
   },
-  -- testing
+  -- general testing
+  -- lua
   {
     "nvim-lua/plenary.nvim",
     lazy = false,
@@ -153,10 +154,12 @@ local plugins = {
     "antoinemadec/FixCursorHold.nvim",
     lazy = false,
   },
+  -- python/golang
   {
     "nvim-neotest/neotest",
     ft = { "python", "go" },
   },
+  -- python
   {
     "nvim-neotest/neotest-python",
     ft = "python",
@@ -164,6 +167,7 @@ local plugins = {
       require("custom.configs.neotest-python").setup()
     end,
   },
+  -- golang
   {
     "nvim-neotest/neotest-go",
     ft = "go",
@@ -171,6 +175,7 @@ local plugins = {
       require("custom.configs.neotest-go").setup()
     end,
   },
+  -- additional plugins
   {
     "ThePrimeagen/harpoon",
     lazy = false,

@@ -27,19 +27,20 @@ local sources = {
   b.formatting.black,
 
   -- go
+  b.code_actions.gomodifytags,
+  b.code_actions.impl,
   b.formatting.gofumpt,
   b.formatting.goimports_reviser,
   b.formatting.golines,
 }
 local on_attach = function(client, bufnr)
-  if client.supports_method("textDocument/formatting") then
-    vim.api.nvim_create_autocmd(
-      "BufWritePre", {
+  if client.supports_method "textDocument/formatting" then
+    vim.api.nvim_create_autocmd("BufWritePre", {
       group = augroup,
       buffer = bufnr,
       callback = function()
-        vim.lsp.buf.format({ bufnr = bufnr })
-      end
+        vim.lsp.buf.format { bufnr = bufnr }
+      end,
     })
   end
 end
