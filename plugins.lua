@@ -75,6 +75,7 @@ local plugins = {
   {
     "nvim-telescope/telescope-dap.nvim",
   },
+  -- go
   {
     "mfussenegger/nvim-dap",
     config = function()
@@ -85,11 +86,11 @@ local plugins = {
   {
     "leoluz/nvim-dap-go",
     ft = "go",
-    dependencies = "mfussenegger/nvim-dap",
-    -- below moved to configs.dap.go
-    -- config = function(_, opts)
-    --   require("dap-go").setup(opts)
-    -- end
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "rcarriga/nvim-dap-ui",
+    },
+    -- config moved to configs.dap.go
   },
   {
     "olexsmir/gopher.nvim",
@@ -108,11 +109,7 @@ local plugins = {
       "mfussenegger/nvim-dap",
       "rcarriga/nvim-dap-ui",
     },
-    -- below moved to configs.dap.python
-    -- config = function(_, opts)
-    --   local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
-    --   require("dap-python").setup(path)
-    -- end,
+    -- config moved to configs.dap.python
   },
   -- {
   --   ""
@@ -158,13 +155,20 @@ local plugins = {
   },
   {
     "nvim-neotest/neotest",
-    ft = "python",
+    ft = { "python", "go" },
   },
   {
     "nvim-neotest/neotest-python",
     ft = "python",
     config = function()
-      require("custom.configs.neotest").setup()
+      require("custom.configs.neotest-python").setup()
+    end,
+  },
+  {
+    "nvim-neotest/neotest-go",
+    ft = "go",
+    config = function()
+      require("custom.configs.neotest-go").setup()
     end,
   },
   {
