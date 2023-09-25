@@ -47,6 +47,12 @@ M.gopher = {
       end,
       "Generate if error",
     },
+    ["<leader>gj"] = {
+      function()
+        vim.api.nvim_exec(":GoTagAdd json", false)
+      end,
+      "Generate json tag",
+    },
   },
 }
 
