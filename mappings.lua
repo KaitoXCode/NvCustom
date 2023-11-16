@@ -15,7 +15,7 @@ M.general = {
 M.dap_go = {
   plugin = true,
   n = {
-    ["<leader>dgu"] = {
+    ["<leader>gdu"] = {
       function()
         local widgets = require "dap.ui.widgets"
         local sidebar = widgets.sidebar(widgets.scopes)
@@ -23,13 +23,13 @@ M.dap_go = {
       end,
       "Open debugging sidebar",
     },
-    ["<leader>dgt"] = {
+    ["<leader>gdt"] = {
       function()
         require("dap-go").debug_test()
       end,
       "Debug go test",
     },
-    ["<leader>dgl"] = {
+    ["<leader>gdl"] = {
       function()
         require("dap-go").debug_last()
       end,
@@ -52,6 +52,12 @@ M.gopher = {
         vim.api.nvim_exec(":GoTagAdd json", false)
       end,
       "Generate json tag",
+    },
+    ["<leader>gr"] = {
+      function()
+        vim.api.nvim_exec(":GoTagRm", false)
+      end,
+      "Generate remove tag",
     },
   },
 }
