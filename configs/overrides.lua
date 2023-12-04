@@ -21,6 +21,7 @@ M.treesitter = {
     "gomod",
     "gosum",
     "gowork",
+    -- "rust-analyzer",
   },
   indent = {
     enable = true,
