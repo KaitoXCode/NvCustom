@@ -58,7 +58,15 @@ M.mason = {
 
     -- go stuff
     "gopls",
+    "gotests",
+    "go-debug-adapter",
     "goimports",
+    "goimports-reviser",
+    "delve",
+    "gofumpt",
+
+    -- docker stuff
+    "dockerfile-language-server",
   },
 }
 
